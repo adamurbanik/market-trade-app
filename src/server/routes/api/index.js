@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import bodyParser from 'body-parser';
+import tradingApi from "./tradingApi";
 
 const createApiRoutes = () => {
   const router = Router();
@@ -11,6 +12,8 @@ const createApiRoutes = () => {
   );
 
   router.use(bodyParser.json());
+
+  router.use('/trades', tradingApi());
 
   return router;
 };
