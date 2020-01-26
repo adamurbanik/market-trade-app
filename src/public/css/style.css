@@ -1,0 +1,18 @@
+/*******************************
+STOCK PRICE
+*******************************/
+:root {
+	--color-blue: #4682b4;
+	--color-orange: #ffa050;
+	--color-lightOrange: #ffc299;
+	--color-white: #ffffff;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body { font: 16px Arial;}
+
+
