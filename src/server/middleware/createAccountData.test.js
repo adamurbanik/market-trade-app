@@ -70,6 +70,7 @@ describe('createAccountData middleware', () => {
         {
           accountType: 'IGSB',
           currency: '$',
+          currencyProfitLoss: '$ 0.23',
           funds: 10000,
           id: 1,
           name: 'Spread bet',
@@ -79,6 +80,7 @@ describe('createAccountData middleware', () => {
         {
           accountType: 'IGSB',
           currency: '$',
+          currencyProfitLoss: '$ -679',
           funds: 1000,
           id: 2,
           name: 'New Spread bet',
@@ -88,6 +90,7 @@ describe('createAccountData middleware', () => {
         {
           accountType: 'IGSB',
           currency: '$',
+          currencyProfitLoss: '$ 16.211',
           funds: 20000000,
           id: 3,
           name: 'Spread bet - demo',

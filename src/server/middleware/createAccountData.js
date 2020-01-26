@@ -9,6 +9,7 @@ const createAccountData = (req, res, next) => {
       account.title = accountTypes.find(
         type => type.id === account.accountType
       ).title;
+      account.currencyProfitLoss = `${account.currency} ${account.profitLoss}`;
       return account;
     });
 

@@ -3,8 +3,7 @@ import { colors, spacing } from './variables';
 
 const Header = () => (
   <header className="header-wrapper">
-    <h1>Accounts</h1>
-    <h2>Click button to download data</h2>
+    <h2>Click Get Accounts to download data</h2>
     <style jsx>
       {`
         .header-wrapper {
@@ -12,10 +11,6 @@ const Header = () => (
           flex-direction: column;
           align-items: center;
           color: ${colors.primary};
-          margin-bottom: ${spacing.xl3};
-        }
-
-        .header-wrapper > h1 {
           margin-bottom: ${spacing.xl};
         }
       `}

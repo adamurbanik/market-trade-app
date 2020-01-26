@@ -1,16 +1,20 @@
 import { default as React, useState } from 'react';
 import Head from 'next/head';
 import classNames from 'classnames';
+import Button from '@material-ui/core/Button';
 import Layout from '../components/layout/layout';
 import Main from '../components/layout/main';
 import Header from '../components/header';
 import { apiRoutes } from '../utils/config';
 import Error from '../components/error';
 import Loader from '../components/loader';
+import AccountList from '../components/accountList';
+import { spacing } from '../components/variables';
 
 const Accounts = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [accounts, setAccounts] = useState(false);
+  const [fetchSuccess, setFetchSuccess] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
   const onClickHandler = async () => {
@@ -18,15 +22,15 @@ const Accounts = () => {
       setIsLoading(true);
 
       const response = await fetch(`${apiRoutes.requestAccounts}`);
-      const { accountsData }  = await response.json();
+      const { accountsData } = await response.json();
+      setAccounts(accountsData);
 
-
-      setSubmitSuccess(true);
+      setFetchSuccess(true);
     } catch (err) {
-      setSubmitSuccess(false);
+      setFetchSuccess(false);
     } finally {
-      setSubmitted(true);
       setIsLoading(false);
+      setSubmitted(true);
     }
   };
 
@@ -38,16 +42,29 @@ const Accounts = () => {
       <Main>
         {isLoading && <Loader />}
         {!isLoading && <Header />}
-        <div className="container">
-          {!isLoading && <button onClick={onClickHandler}>click</button>}
-
-        </div>
+        {!isLoading && (
+          <div className="container">
+            <Button variant="outlined" color="primary" onClick={onClickHandler}>
+              Get Accounts
+            </Button>
+            {submitted && fetchSuccess && (
+              <div className="accounts-wrapper">
+                <AccountList data={accounts} />
+              </div>
+            )}
+            {submitted && !fetchSuccess && <Error />}
+          </div>
+        )}
       </Main>
       <style jsx>{`
         .container {
           display: flex;
           flex-direction: column;
           align-items: center;
+        }
+
+        .accounts-wrapper {
+          margin: ${spacing.xl3} 0;
         }
       `}</style>
     </Layout>
