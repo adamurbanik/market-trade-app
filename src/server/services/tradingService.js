@@ -1,18 +1,19 @@
 import restClient, { optionalHeaders } from '../lib/rest-client';
+import { restdbConfig } from '../config';
+const { restdbIOHost, accountsEndpoint, accountTypesEndpoint } = restdbConfig;
 
 const requestAccountsData = () => {
   return restClient.get({
-    url: `https://recruitmentdb-508d.restdb.io/rest/accounts`,
+    url: `${restdbIOHost}${accountsEndpoint}`,
     headers: optionalHeaders
   });
 };
 
 const requestAccountTypesData = () => {
   return restClient.get({
-    url: `https://recruitmentdb-508d.restdb.io/rest/accounttypes`,
+    url: `${restdbIOHost}${accountTypesEndpoint}`,
     headers: optionalHeaders
-  })
-
+  });
 };
 
 export { requestAccountsData, requestAccountTypesData };

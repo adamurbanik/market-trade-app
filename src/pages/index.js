@@ -1,6 +1,5 @@
 import { default as React, useState } from 'react';
 import Head from 'next/head';
-import classNames from 'classnames';
 import Button from '@material-ui/core/Button';
 import Layout from '../components/layout/layout';
 import Main from '../components/layout/main';

@@ -10,4 +10,16 @@ const config: ServerConfig = {
   logLevel: process.env.LOG_LEVEL || ''
 };
 
-export { config as default };
+type RestdbConfig = {
+  restdbIOHost: string,
+  accountsEndpoint: string,
+  accountTypesEndpoint: string
+};
+
+const restdbConfig: RestdbConfig = {
+  restdbIOHost: process.env.RESTDB_IO_HOST,
+  accountsEndpoint: process.env.ACCOUNTS_ENDPOINT,
+  accountTypesEndpoint: process.env.ACCOUNT_TYPES_ENDPOINT
+};
+
+export { config as default, restdbConfig };

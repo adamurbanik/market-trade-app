@@ -2,7 +2,7 @@ market-trade-app
 =======
 Project structure and technology stack originates from [NextJS](https://nextjs.org/) framework with addon of [Material UI](https://material-ui.com/) 
 and [material-table](https://material-table.com/#/).
-Application to process and to display data from restdb.io [restdb.io](https://restdb.io/templates/). 
+Application to process and to display data from restdb.io [restdb.io](https://restdb.io/). 
 
 Requirements
 ------------
@@ -14,6 +14,7 @@ Quickstart
 
 - `npm i`
 - `npm run dev`
+- `npm test`
 
 
 Access
@@ -25,4 +26,4 @@ Client side app
 
 Server side and api
 
-`http://localhost:3000/app/api/ ....`
+`http://localhost:3000/app/api/trades/accounts/request`

@@ -1,0 +1,162 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Accounts renders correctly 1`] = `
+<Layout>
+  <Head>
+    <title
+      className="jsx-808905262"
+    >
+      Accounts
+    </title>
+  </Head>
+  <Main>
+    <Header />
+    <div
+      className="jsx-808905262 container"
+    >
+      <WithStyles(ForwardRef(Button))
+        color="primary"
+        onClick={[Function]}
+        variant="outlined"
+      >
+        Get Accounts
+      </WithStyles(ForwardRef(Button))>
+    </div>
+  </Main>
+  <JSXStyle
+    dynamic={
+      Array [
+        "4.742rem",
+      ]
+    }
+    id="265910860"
+  >
+    .container.__jsx-style-dynamic-selector{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}.accounts-wrapper.__jsx-style-dynamic-selector{margin:4.742rem 0;}
+  </JSXStyle>
+</Layout>
+`;
+
+exports[`Accounts renders in error state 1`] = `
+<main
+  className="jsx-2153476396"
+  id="main"
+>
+  <header
+    className="jsx-206860747 header-wrapper"
+  >
+    <h2
+      className="jsx-206860747"
+    >
+      Click Get Accounts to download data
+    </h2>
+  </header>
+  <div
+    className="jsx-808905262 container"
+  >
+    <button
+      className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
+    >
+      <span
+        className="MuiButton-label"
+      >
+        Get Accounts
+      </span>
+      <span
+        className="MuiTouchRipple-root"
+      />
+    </button>
+    <div
+      className="jsx-1657759666 error-container"
+    >
+      <h1
+        className="jsx-1657759666 error-header"
+      >
+        Sorry
+      </h1>
+      <p
+        className="jsx-1657759666 error-message"
+      >
+        This data could not be downloaded.
+      </p>
+      <a
+        className="jsx-1657759666"
+        href="/"
+      >
+        Go back
+      </a>
+    </div>
+  </div>
+</main>
+`;
+
+exports[`Accounts renders successfully in submitted state 1`] = `
+<main
+  className="jsx-2153476396"
+  id="main"
+>
+  <header
+    className="jsx-206860747 header-wrapper"
+  >
+    <h2
+      className="jsx-206860747"
+    >
+      Click Get Accounts to download data
+    </h2>
+  </header>
+  <div
+    className="jsx-808905262 container"
+  >
+    <button
+      className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
+    >
+      <span
+        className="MuiButton-label"
+      >
+        Get Accounts
+      </span>
+      <span
+        className="MuiTouchRipple-root"
+      />
+    </button>
+    <div
+      className="jsx-808905262 accounts-wrapper"
+    >
+      <div
+        className="jsx-4293149722 table-header"
+      >
+        Sorted by Name (asc), Profit & Loss (asc)
+      </div>
+    </div>
+  </div>
+</main>
+`;
